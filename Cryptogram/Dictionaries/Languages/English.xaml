@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+
+
+    <!--******************** Authorization window ********************-->
+
+    <!-- Log in Page (Log) -->
+    <v:String x:Key="LogEmail">Email</v:String>
+    <v:String x:Key="LogPass">Password</v:String>
+    <v:String x:Key="LogLog">Log in</v:String>
+    <v:String x:Key="LogSign">Sign up</v:String>
+
+    <!-- Reg Pages (Log) -->
+    <v:String x:Key="RegEmail">Input your email...</v:String>
+    <v:String x:Key="RegPass">Input your password...</v:String>
+    <v:String x:Key="RegRepPass">Repeat password...</v:String>
+    <v:String x:Key="RegCreateAcc">Create account</v:String>
+
+
+
+</ResourceDictionary>
