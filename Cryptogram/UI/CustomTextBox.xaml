@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Cryptogram.UI.CustomTextBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Cryptogram.UI"
+             mc:Ignorable="d" x:Name="control"
+             d:DesignHeight="40" d:DesignWidth="100">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/TextStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <TextBox Style="{DynamicResource InputTextBox}" x:Name="box" TextChanged="Box_TextChanged" Padding="5,0,5,0"/>
+
+        <PasswordBox Style="{DynamicResource InputPasswordBox}" x:Name="pbox" PasswordChanged="Box_PasswordChanged"  Padding="5,0,5,0"/>
+
+        <TextBlock VerticalAlignment="Center" x:Name="baseText" FontSize="{Binding ElementName=control, Path=FontSize}" Foreground="#9B9B9B"
+                   HorizontalAlignment="left" Padding="15,0,0,0" IsHitTestVisible="False"/>
+    </Grid>
+</UserControl>

@@ -3,7 +3,10 @@
                     xmlns:v="clr-namespace:System;assembly=mscorlib">
 
     <!--******************** Authorization window ********************-->
-    
+
+    <v:String x:Key="Authorization">Авторизация</v:String>
+
+
     <!-- Log in Page (Log) -->
     <v:String x:Key="LogEmail">Электронный адрес</v:String>
     <v:String x:Key="LogPass">Пароль</v:String>
@@ -11,33 +14,33 @@
     <v:String x:Key="LogSign">Регистрация</v:String>
 
     <!-- Reg Pages (Reg) -->
-    <v:String x:Key="RegEmail">Введите вашу почту</v:String>
-    <v:String x:Key="RegPass">Введите пароль</v:String>
-    <v:String x:Key="RegRepPass">Повторите пароль</v:String>
+    <v:String x:Key="RegEmail">Введите вашу почту...</v:String>
+    <v:String x:Key="RegPass">Введите пароль...</v:String>
+    <v:String x:Key="RegRepPass">Повторите пароль...</v:String>
     <v:String x:Key="RegCreateAcc">Создать аккаунт</v:String>
 
     <!-- 2 step registration (Reg2) -->
-    <v:String x:Key="Reg2Welc"></v:String>
-    <v:String x:Key="Reg2Slogan"></v:String>
-    <v:String x:Key="Reg2Name"></v:String>
-    <v:String x:Key="Reg2InpName"></v:String>
-    <v:String x:Key="Reg2LastName"></v:String>
-    <v:String x:Key="Reg2InpLastName"></v:String>
-    <v:String x:Key="Reg2UserName"></v:String>
-    <v:String x:Key="Reg2ChooseIMG"></v:String>
-    <v:String x:Key="Reg2Back"></v:String>
-    <v:String x:Key="Reg2Continue"></v:String>
+    <v:String x:Key="Reg2Welc">Добро пожаловать в Cryptogram</v:String>
+    <v:String x:Key="Reg2Slogan">Делитесь самым сокровенным безопасно</v:String>
+    <v:String x:Key="Reg2Name">Имя</v:String>
+    <v:String x:Key="Reg2InpName">Введите ваше имя...</v:String>
+    <v:String x:Key="Reg2LastName">Фамилия</v:String>
+    <v:String x:Key="Reg2InpLastName">Введите вашу фамилию</v:String>
+    <v:String x:Key="Reg2UserName">Username</v:String>
+    <v:String x:Key="Reg2ChooseIMG">Выберите аватар</v:String>
+    <v:String x:Key="Reg2Back">Назад</v:String>
+    <v:String x:Key="Reg2Continue">Далее</v:String>
 
     <!-- 3 step registration (Reg3) -->
-    <v:String x:Key="Reg3Welc"></v:String>
-    <v:String x:Key="Reg3Slogan"></v:String>
-    <v:String x:Key="Reg3Key"></v:String>
-    <v:String x:Key="Reg3Info"></v:String>
-    <v:String x:Key="Reg3UseBaseKey"></v:String>
-    <v:String x:Key="Reg3Message"></v:String>
-    <v:String x:Key="Reg3CryptoMessage"></v:String>
-    <v:String x:Key="Reg3Back"></v:String>
-    <v:String x:Key="Reg3Continue"></v:String>
+    <v:String x:Key="Reg3Welc">Cryptogram</v:String>
+    <v:String x:Key="Reg3Slogan">Делитесь самым сокровенным безопасно</v:String>
+    <v:String x:Key="Reg3Key">Введите ключ шифровки</v:String>
+    <v:String x:Key="Reg3Info">Узнать больше</v:String>
+    <v:String x:Key="Reg3UseBaseKey">Ключ по умолчанию</v:String>
+    <v:String x:Key="Reg3Message">Введите люой текст</v:String>
+    <v:String x:Key="Reg3CryptoMessage">Пример шифрования</v:String>
+    <v:String x:Key="Reg3Back">Назад</v:String>
+    <v:String x:Key="Reg3Continue">Далее</v:String>
                         
 
 

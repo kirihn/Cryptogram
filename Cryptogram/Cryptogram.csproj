@@ -8,8 +8,59 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="IMG\Icon\" />
+    <None Remove="IMG\Icon\LogInLogo.png" />
+    <None Remove="StandartBackground.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="IMG\Logotype\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="IMG\Icon\LogInLogo.png" />
+    <Resource Include="StandartBackground.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Localization\Eng.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Eng.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Localization\Rus.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Rus.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Themes\DarkTheme.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DarkTheme.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Themes\LightTheme.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LightTheme.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Localization\Eng.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Eng.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Rus.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Rus.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\DarkTheme.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DarkTheme.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\LightTheme.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LightTheme.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

@@ -5,6 +5,8 @@
 
     <!--******************** Authorization window ********************-->
 
+    <v:String x:Key="Authorization">Authorization</v:String>
+
     <!-- Log in Page (Log) -->
     <v:String x:Key="LogEmail">Email</v:String>
     <v:String x:Key="LogPass">Password</v:String>
@@ -17,6 +19,58 @@
     <v:String x:Key="RegRepPass">Repeat password...</v:String>
     <v:String x:Key="RegCreateAcc">Create account</v:String>
 
+    <!-- 2 step registration (Reg2) -->
+    <v:String x:Key="Reg2Welc">Welcome to Cryptogram</v:String>
+    <v:String x:Key="Reg2Slogan">Share your most intimate safely</v:String>
+    <v:String x:Key="Reg2Name">Name</v:String>
+    <v:String x:Key="Reg2InpName">Input your name...</v:String>
+    <v:String x:Key="Reg2LastName">Last name</v:String>
+    <v:String x:Key="Reg2InpLastName">Input your last Name...</v:String>
+    <v:String x:Key="Reg2UserName">Input username...</v:String>
+    <v:String x:Key="Reg2ChooseIMG">Choose image</v:String>
+    <v:String x:Key="Reg2Back">Back</v:String>
+    <v:String x:Key="Reg2Continue">Continue</v:String>
 
+    <!-- 3 step registration (Reg3) -->
+    <v:String x:Key="Reg3Welc">Cryptogram</v:String>
+    <v:String x:Key="Reg3Slogan">Share your most intimate safely</v:String>
+    <v:String x:Key="Reg3Key">Input your encryption key...</v:String>
+    <v:String x:Key="Reg3Info">Get more information</v:String>
+    <v:String x:Key="Reg3UseBaseKey">Use base encryption key</v:String>
+    <v:String x:Key="Reg3Message">Input any massage...</v:String>
+    <v:String x:Key="Reg3CryptoMessage">It’s look like...</v:String>
+    <v:String x:Key="Reg3Back">Back</v:String>
+    <v:String x:Key="Reg3Continue">Continue</v:String>
 
 </ResourceDictionary>
+ <!-- Authorizathion
+Loc_LogEmail 
+Loc_LogPass
+Loc_LogLog
+Loc_LogSign
+Loc_RegEmail
+Loc_RegPass
+Loc_RegRepPass
+Loc_RegCreateAcc
+Loc_Reg2Welc
+Loc_Reg2Slogan
+Loc_Reg2Name
+Loc_Reg2InpName
+Loc_Reg2LastName
+Loc_Reg2InpLastName
+Loc_Reg2UserName
+Loc_Reg2ChooseIMG
+Loc_Reg2Back
+Loc_Reg2Continue
+Loc_Reg3Welc
+Loc_Reg3Slogan
+Loc_Reg3Key
+Loc_Reg3Info
+Loc_Reg3UseBaseKey
+Loc_Reg3Message
+Loc_Reg3CryptoMessage
+Loc_Reg3Back
+Loc_Reg3Continue
+    
+    -->
+    
