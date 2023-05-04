@@ -32,15 +32,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Rus.resx</DependentUpon>
     </Compile>
-    <Compile Update="Themes\DarkTheme.Designer.cs">
+    <Compile Update="Themes\DarkThemeR.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>DarkTheme.resx</DependentUpon>
+      <DependentUpon>DarkThemeR.resx</DependentUpon>
     </Compile>
-    <Compile Update="Themes\LightTheme.Designer.cs">
+    <Compile Update="Themes\LightThemeR.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>LightTheme.resx</DependentUpon>
+      <DependentUpon>LightThemeR.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -53,13 +53,13 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Rus.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Themes\DarkTheme.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>DarkTheme.Designer.cs</LastGenOutput>
+    <EmbeddedResource Update="Themes\DarkThemeR.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DarkThemeR.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Themes\LightTheme.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>LightTheme.Designer.cs</LastGenOutput>
+    <EmbeddedResource Update="Themes\LightThemeR.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LightThemeR.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

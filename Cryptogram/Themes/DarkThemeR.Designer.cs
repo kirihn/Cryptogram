@@ -22,24 +22,24 @@ namespace Cryptogram.Themes {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class LightTheme {
+    public class DarkThemeR {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal LightTheme() {
+        internal DarkThemeR() {
         }
         
         /// <summary>
         ///   Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Cryptogram.Themes.LightTheme", typeof(LightTheme).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Cryptogram.Themes.DarkThemeR", typeof(DarkThemeR).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -51,7 +51,7 @@ namespace Cryptogram.Themes {
         ///   обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,9 +61,9 @@ namespace Cryptogram.Themes {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на #D0D0D0.
+        ///   Ищет локализованную строку, похожую на #2F2F2F.
         /// </summary>
-        internal static string Theme_DarkBground {
+        public static string Theme_DarkBground {
             get {
                 return ResourceManager.GetString("Theme_DarkBground", resourceCulture);
             }
@@ -72,25 +72,25 @@ namespace Cryptogram.Themes {
         /// <summary>
         ///   Ищет локализованную строку, похожую на #5EB93E.
         /// </summary>
-        internal static string Theme_GreenColor {
+        public static string Theme_GreenColor {
             get {
                 return ResourceManager.GetString("Theme_GreenColor", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на #F4F4F4.
+        ///   Ищет локализованную строку, похожую на #514E54.
         /// </summary>
-        internal static string Theme_LightBground {
+        public static string Theme_LightBground {
             get {
                 return ResourceManager.GetString("Theme_LightBground", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на #C9BAE1.
+        ///   Ищет локализованную строку, похожую на #7E55C2.
         /// </summary>
-        internal static string Theme_MainColor {
+        public static string Theme_MainColor {
             get {
                 return ResourceManager.GetString("Theme_MainColor", resourceCulture);
             }

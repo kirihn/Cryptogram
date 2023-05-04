@@ -3,7 +3,9 @@
 
     <Style x:Key="StepButton" TargetType="Button">
         <!-- x:Type ui:CustomTextBox -->
-        <Setter Property="Foreground" Value="#7E55C2"/>
+        <Setter Property="Background" Value="{DynamicResource Theme_MainColor}"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Foreground" Value="White"/>
         <Setter Property="Width" Value="150"/>
         <Setter Property="Height" Value="40"/>
         <Style.Triggers>
@@ -11,7 +13,16 @@
                 <EventTrigger.Actions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Storyboard.TargetProperty="Height" Duration="0:0:0.2" To="50" AutoReverse="True" />
+                            <DoubleAnimation Storyboard.TargetProperty="Width" Duration="0:0:0.1" To="170"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+            <EventTrigger RoutedEvent="MouseLeave">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Width" Duration="0:0:0.1" To="150"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger.Actions>

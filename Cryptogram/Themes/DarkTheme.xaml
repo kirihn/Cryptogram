@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:th="clr-namespace:System;assembly=mscorlib">
+    <SolidColorBrush x:Key="Theme_MainColor" Color="#7E55C2"/>
+    <SolidColorBrush x:Key="Theme_DarkBground" Color="#2F2F2F"/>
+    <SolidColorBrush x:Key="Theme_LightBground" Color="#514E54"/>
+    <SolidColorBrush x:Key="Theme_GreenColor" Color="#5EB93E"/>
+
+</ResourceDictionary>

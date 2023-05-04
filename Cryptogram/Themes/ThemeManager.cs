@@ -32,43 +32,26 @@ namespace Cryptogram.Themes
 
         public ThemeManager(Application app)
         {
-            _app = app;
-
-            foreach (var item in typeof(DarkTheme).GetProperties())
-            {
-                if (item.Name.StartsWith("Theme"))
-                {
-                    _app.Resources.Add(item.Name, "INIT");
-                }
-            }
-
-
-            SetLang("Dark");
+            var uri = new Uri("../Themes/DarkTheme.xaml", UriKind.Relative);
+            // загружаем словарь ресурсов
+            ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+            // добавляем загруженный словарь ресурсов
+            Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+            //SetLang("../Themes/LightTheme.xaml");
         }
 
         public void SetLang(string TypeTheme)
         {
-            PropertyInfo[] properties;
 
-            switch (TypeTheme)
+            var uri = new Uri(TypeTheme, UriKind.Relative);
+            // загружаем словарь ресурсов
+            ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+            // добавляем загруженный словарь ресурсов
+            for (int i = 0; i < Application.Current.Resources.MergedDictionaries.Count; i++)
             {
-                case "Dark":
-                    properties = typeof(DarkTheme).GetProperties();
-                    break;
-                case "Light":
-                    properties = typeof(LightTheme).GetProperties();
-                    break;
-                default:
-                    MessageBox.Show("Ошибка смены цвета в менеджере");
-                    properties = typeof(DarkTheme).GetProperties();
-                    break;
-            }
-
-            foreach (var item in properties)
-            {
-                if (item.Name.StartsWith("Theme"))
+                if (Application.Current.Resources.MergedDictionaries[i].Contains("Theme_MainColor"))
                 {
-                    _app.Resources[item.Name] = (string)item.GetValue(typeof(DarkTheme));
+                    Application.Current.Resources.MergedDictionaries[i] = resourceDict;
                 }
             }
         }
