@@ -126,11 +126,17 @@
   <data name="Loc_LogLog" xml:space="preserve">
     <value>Log in</value>
   </data>
+  <data name="Loc_LogOut" xml:space="preserve">
+    <value>Log out</value>
+  </data>
   <data name="Loc_LogPass" xml:space="preserve">
     <value>Password</value>
   </data>
   <data name="Loc_LogSign" xml:space="preserve">
     <value>Sign up</value>
+  </data>
+  <data name="Loc_PrivatePolice" xml:space="preserve">
+    <value>I accept the privacy policy</value>
   </data>
   <data name="Loc_Reg2Back" xml:space="preserve">
     <value>Back</value>
@@ -140,6 +146,9 @@
   </data>
   <data name="Loc_Reg2Continue" xml:space="preserve">
     <value>Continue</value>
+  </data>
+  <data name="Loc_Reg2Email" xml:space="preserve">
+    <value>Email</value>
   </data>
   <data name="Loc_Reg2InpLastName" xml:space="preserve">
     <value>Input your last Name...</value>
@@ -174,6 +183,9 @@
   <data name="Loc_Reg3CryptoMessage" xml:space="preserve">
     <value>It’s look like...</value>
   </data>
+  <data name="Loc_Reg3EncryptKey" xml:space="preserve">
+    <value>Encryptkey</value>
+  </data>
   <data name="Loc_Reg3Info" xml:space="preserve">
     <value>Get more information</value>
   </data>
@@ -187,7 +199,7 @@
     <value>Share your most intimate safely</value>
   </data>
   <data name="Loc_Reg3UseBaseKey" xml:space="preserve">
-    <value>Use base encryption key</value>
+    <value>Use random encryption key</value>
   </data>
   <data name="Loc_Reg3Welc" xml:space="preserve">
     <value>Cryptogram</value>

@@ -2,8 +2,18 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Cryptogram"
-             StartupUri="/windows/MainWindow.xaml">
+             StartupUri="/View/Registration.xaml">
+    <!--Authorization.xaml--> <!--Registration.xaml-->
     <Application.Resources>
-         
+        
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                
+                <ResourceDictionary Source="/Styles/ButtonsStyles.xaml"/>
+                <ResourceDictionary Source="/Styles/TextStyles.xaml"/>
+                
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        
     </Application.Resources>
 </Application>

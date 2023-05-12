@@ -5,4 +5,7 @@
     <SolidColorBrush x:Key="Theme_DarkBground" Color="#D0D0D0"/>
     <SolidColorBrush x:Key="Theme_LightBground" Color="#F4F4F4"/>
     <SolidColorBrush x:Key="Theme_GreenColor" Color="#5EB93E"/>
+    <SolidColorBrush x:Key="Theme_TextColor" Color="Black"/>
+    <SolidColorBrush x:Key="Theme_OnFocus" Color="#DAD1E9"/>
+
 </ResourceDictionary>

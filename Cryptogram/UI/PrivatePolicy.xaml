@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="Cryptogram.UI.PrivatePolicy"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Cryptogram.UI"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="420">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Styles/TextStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid VerticalAlignment="Center">
+
+        <WrapPanel Margin="5 0 0 0" Width="auto">
+            <CheckBox VerticalAlignment="Center" x:Name="CheckBoxForPolicy" Padding="0 0 10 0" Checked="GetAgree"/>
+            <TextBlock Style="{DynamicResource HyperText}" Text="Я принимаю политику конфиденциальности" MouseDown="GetRead"/> <!--{DynamicResource Loc_PrivatePolice}-->
+        </WrapPanel>
+        
+    </Grid>
+</UserControl>

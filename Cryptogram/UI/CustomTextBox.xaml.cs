@@ -25,7 +25,7 @@ namespace Cryptogram.UI
         public static readonly DependencyProperty IsPasswordProperty;
         public static readonly RoutedEvent ChangedEvent;
 
-        public string Info { get; private set; }
+        public string Info { get; set; }
 
         static CustomTextBox()
         {

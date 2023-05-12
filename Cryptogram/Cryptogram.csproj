@@ -9,15 +9,32 @@
 
   <ItemGroup>
     <None Remove="IMG\Icon\LogInLogo.png" />
+    <None Remove="IMG\Icon\Search.png" />
+    <None Remove="IMG\Icon\SendMessage.png" />
+    <None Remove="IMG\Icon\SettingOff.png" />
+    <None Remove="IMG\Icon\SettingsOn.png" />
+    <None Remove="IMG\Icon\StandartBackground.jpg" />
+    <None Remove="IMG\Icon\TransformKey.png" />
     <None Remove="StandartBackground.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="IMG\Logotype\" />
+    <Folder Include="Pages\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="IMG\Icon\LogInLogo.png" />
+    <Resource Include="IMG\Icon\Search.png" />
+    <Resource Include="IMG\Icon\SendMessage.png" />
+    <Resource Include="IMG\Icon\SettingOff.png" />
+    <Resource Include="IMG\Icon\SettingsOn.png" />
+    <Resource Include="IMG\Icon\StandartBackground.jpg" />
+    <Resource Include="IMG\Icon\TransformKey.png" />
     <Resource Include="StandartBackground.jpg" />
   </ItemGroup>
 
@@ -32,16 +49,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Rus.resx</DependentUpon>
     </Compile>
-    <Compile Update="Themes\DarkThemeR.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>DarkThemeR.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Themes\LightThemeR.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>LightThemeR.resx</DependentUpon>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -52,14 +59,6 @@
     <EmbeddedResource Update="Localization\Rus.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Rus.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\DarkThemeR.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>DarkThemeR.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\LightThemeR.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>LightThemeR.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

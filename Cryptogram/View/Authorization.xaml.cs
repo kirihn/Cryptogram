@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cryptogram.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,18 +11,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Cryptogram.windows
+namespace Cryptogram
 {
     /// <summary>
-    /// Логика взаимодействия для Authorization.xaml
+    /// Interaction logic for Authorization.xaml
     /// </summary>
     public partial class Authorization : Window
     {
         public Authorization()
         {
             InitializeComponent();
+            DataContext = new AuthorizationVM(this);
         }
     }
 }

@@ -88,6 +88,15 @@ namespace Cryptogram.Localization {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Выйти.
+        /// </summary>
+        public static string Loc_LogOut {
+            get {
+                return ResourceManager.GetString("Loc_LogOut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Пароль.
         /// </summary>
         public static string Loc_LogPass {
@@ -102,6 +111,15 @@ namespace Cryptogram.Localization {
         public static string Loc_LogSign {
             get {
                 return ResourceManager.GetString("Loc_LogSign", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Я принимаю политику конфиденциальности.
+        /// </summary>
+        public static string Loc_PrivatePolice {
+            get {
+                return ResourceManager.GetString("Loc_PrivatePolice", resourceCulture);
             }
         }
         
@@ -129,6 +147,15 @@ namespace Cryptogram.Localization {
         public static string Loc_Reg2Continue {
             get {
                 return ResourceManager.GetString("Loc_Reg2Continue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Почта.
+        /// </summary>
+        public static string Loc_Reg2Email {
+            get {
+                return ResourceManager.GetString("Loc_Reg2Email", resourceCulture);
             }
         }
         
@@ -232,6 +259,15 @@ namespace Cryptogram.Localization {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Шифр-ключ.
+        /// </summary>
+        public static string Loc_Reg3EncryptKey {
+            get {
+                return ResourceManager.GetString("Loc_Reg3EncryptKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Узнать больше.
         /// </summary>
         public static string Loc_Reg3Info {
@@ -250,7 +286,7 @@ namespace Cryptogram.Localization {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Введите люой текст.
+        ///   Ищет локализованную строку, похожую на Введите любой текст.
         /// </summary>
         public static string Loc_Reg3Message {
             get {
@@ -268,7 +304,7 @@ namespace Cryptogram.Localization {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Ключ по умолчанию.
+        ///   Ищет локализованную строку, похожую на Случайный шифр-ключ.
         /// </summary>
         public static string Loc_Reg3UseBaseKey {
             get {
