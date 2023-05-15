@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cryptogram.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,8 @@ namespace Cryptogram.View
         public Registration()
         {
             InitializeComponent();
+            DataContext = new RegistrationVM(this);
+
         }
 
         public void GetMoreInformation(object sender, MouseButtonEventArgs e)
@@ -31,7 +34,7 @@ namespace Cryptogram.View
 
         public void GetRandomKey(object sender, MouseButtonEventArgs e)
         {
-            KeyHolder.box.Text = (new Random()).NextInt64(100000000000000000,999_999_999_999_999_999).ToString();
+            KeyHolderR.box.Text = (new Random()).NextInt64(100000000000000000,999_999_999_999_999_999).ToString();
         }
 
         private void Exit_Executed(object sender, ExecutedRoutedEventArgs e)

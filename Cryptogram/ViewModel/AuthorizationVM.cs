@@ -1,14 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media;
 using System.Windows.Media.Animation;
 using Cryptogram.Commands;
+using Cryptogram.Model;
+using Cryptogram.Model.Menager;
+using Cryptogram.View;
 
 namespace Cryptogram.ViewModel
 {
@@ -18,36 +24,12 @@ namespace Cryptogram.ViewModel
         {
             SetState(2);
 
-            //owner.errorMessage.Visibility = Visibility.Hidden;
-
-            //DataBaseManager.CreateInstance();
-
-            //DataBaseManager.Instance.OnConnected += DataBase_OnConnected;
-            //DataBaseManager.Instance.OnError += DataBase_OnError;
-
-            //if (!DataBaseManager.Instance.IsConnected)
-            //    DataBaseManager.Instance.ConnectAsync();
-            //else
-            //    SetState(2);
+            if (MSSQLBDManager.Instance.Connection.Database == "TestCryptogram") // добавить анимацию подключания к бд
+            {
+                //Thread.Sleep(5000);
+                //SetState(2);
+            }
         }
-
-        //private void DataBase_OnError(string message, DataBaseErrorType errorType)
-        //{
-        //    if (errorType == DataBaseErrorType.ConnectionFailed)
-        //        SetState(1);
-        //}
-        //private void DataBase_OnConnected()
-        //{
-        //    ThicknessAnimation maranim = new ThicknessAnimation();
-
-        //    maranim.Duration = TimeSpan.FromSeconds(0.5d);
-        //    maranim.From = new Thickness(30, 85, 40, 0);
-        //    maranim.To = Owner.Main.Margin;
-        //    maranim.EasingFunction = new PowerEase() { EasingMode = EasingMode.EaseOut, Power = 2 };
-
-        //    SetState(2);
-        //    Owner.Main.BeginAnimation(FrameworkElement.MarginProperty, maranim);
-        //}
 
         public void SetState(int state = 0)
         {
@@ -99,38 +81,94 @@ namespace Cryptogram.ViewModel
         }
         private bool GetAuthorizathionCanExecuted(object obj)
         {
-            //if (!DataBaseManager.Instance.IsConnected)
-            //    return false;
-
-            //User user = DataBaseManager.Instance.Users.GetByEmail(Owner.emailBox.Text);
-
-            //if (user == null)
-            //{
-            //    Owner.errorMessage.Visibility = Visibility.Visible;
-            //    return false;
-            //}
-
-            //if (!PasswordHasher.Compare(user.Password, Owner.passwordBox.Password))
-            //{
-            //    Owner.errorMessage.Visibility = Visibility.Visible;
-            //    return false;
-            //}
-
-            //User.Current = user;
-
             return true;
         }
         private void GetAuthorizathionExecuted(object obj)
         {
-            //User.Current.LastAuthDate = DateTime.Now;
+            if (CheckValid() == false) return;
 
-            //DataBaseManager.Instance.Users.Update(User.Current);
+            // MSSQLBDManager.Instance.Connection
+            string queryString = "SELECT UserId FROM LogInUser WHERE Login = '" + Owner.LoginBox.Info + "' and Password = '" + Cryptoger.HashString(Owner.PasswordBox.Info) + "';";
 
-            //MainWindow mainWindow = new MainWindow();
+            SqlCommand command = new SqlCommand(queryString, MSSQLBDManager.Instance.Connection);
 
-            Login = Owner.LoginBox.Info;
+            int UserId;
+            // Получаем данные и выводим их содержимое в консоль
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    UserId = Convert.ToInt32(reader[0]);
+                }
+                else
+                {
+                    MessageBox.Show("      ---------------- Данного аккаунта нет -----------------\n" +
+                                    "      -- Возможно вы ввели неверный логин или пароль --\n" +
+                                    "      - You may have entered an incorrect login or password -");
+                    return;
+                }
+            }
 
-            MessageBox.Show(Login);
+            command.Dispose();
+            //
+            Profil profil = new(UserId);
+            profil.Show();
+            Owner.Close();
+            //MessageBox.Show("Запрос авторизации сработал");
+        }
+
+        private bool CheckValid()
+        {
+            string ErrorMessage = "";
+            if (Owner.LoginBox.Info == "")
+            {
+                Owner.LoginBox.box.Background = Brushes.IndianRed;
+                ErrorMessage += "Пустое значение логина(Empty login value)\n";
+            }
+            else
+            {
+                Owner.LoginBox.box.Background = Brushes.White;
+            }
+
+            if (Owner.PasswordBox.Info == "")
+            {
+                Owner.PasswordBox.pbox.Background = Brushes.IndianRed;
+                ErrorMessage += "Пустое значение пароля(Empty password value)\n";
+            }
+            else
+            {
+                Owner.PasswordBox.pbox.Background = Brushes.White;
+            }
+
+            if (ErrorMessage != "")
+            {
+                MessageBox.Show(ErrorMessage);
+                return false;
+            }
+            return true;
+        }
+        // Registrathion
+
+        private BaseCommand GetRegistrathionCommand;
+        public ICommand GetRegistrathion
+        {
+            get
+            {
+                if (GetRegistrathionCommand == null)
+                    GetRegistrathionCommand = new BaseCommand(GetRegistrathionExecuted, GetRegistrathionCanExecuted);
+
+                return GetRegistrathionCommand;
+            }
+        }
+        private bool GetRegistrathionCanExecuted(object obj)
+        {
+            return true;
+        }
+        private void GetRegistrathionExecuted(object obj)
+        {
+            Registration RegWindow = new();
+            Owner.Close();
+            RegWindow.Show();
         }
     }
 }

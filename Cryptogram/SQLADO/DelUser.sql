@@ -1,0 +1,9 @@
+﻿CREATE PROCEDURE DeleteAnyUser
+    @UserID int
+AS
+BEGIN
+    SET NOCOUNT ON;
+    DELETE FROM LogInUser WHERE UserID = @UserID
+    DELETE FROM AnyUser WHERE UserID = @UserID
+
+END

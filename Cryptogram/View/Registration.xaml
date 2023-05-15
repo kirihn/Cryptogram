@@ -5,12 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cryptogram.View"
         xmlns:ui="clr-namespace:Cryptogram.UI"
-        mc:Ignorable="d"
         ResizeMode="CanMinimize"
-        Title="Registration" Height="630" Width="900" WindowStartupLocation="CenterScreen" >
-    <Window.CommandBindings>
-        <CommandBinding Command="ui:ExitCommand.Exit" Executed="Exit_Executed"/>
-    </Window.CommandBindings>
+        mc:Ignorable="d"
+        Title="{DynamicResource Loc_Reg3Welc}" Height="630" Width="900" WindowStartupLocation="CenterScreen" >
+
     <Grid Background="#514E54">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -29,38 +27,38 @@
         </StackPanel>
         
         <StackPanel Grid.Row="1" Grid.ColumnSpan="3">
-            <TextBlock Style="{StaticResource SloganText}" HorizontalAlignment="Center">Welcome to Cryptogram</TextBlock>
-            <TextBlock Style="{StaticResource SloganText}" HorizontalAlignment="Center">Share your most intimate safely</TextBlock>
+            <TextBlock Style="{StaticResource SloganText}" HorizontalAlignment="Center" Text="{DynamicResource Loc_Reg2Welc}" />
+            <TextBlock Style="{StaticResource SloganText}" HorizontalAlignment="Center" Text="{DynamicResource Loc_Reg2Slogan}"/>
         </StackPanel>
 
         <WrapPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" >
             <StackPanel Margin="5">
                 <TextBlock Margin="5 0 5 5" Text="{DynamicResource Loc_Reg2Name}"/>
-                <ui:CustomTextBox Width="210px" BaseText="{DynamicResource Loc_Reg2InpName}"/>
+                <ui:CustomTextBox x:Name="NameR" Width="210px" BaseText="{DynamicResource Loc_Reg2InpName}"/>
             </StackPanel>
             <StackPanel Margin="5">
                 <TextBlock Margin="5 0 5 5" Text="{DynamicResource Loc_Reg2LastName}"/>
-                <ui:CustomTextBox Width="210px" BaseText="{DynamicResource Loc_Reg2InpLastName}"/>
+                <ui:CustomTextBox x:Name="LastnameR" Width="210px" BaseText="{DynamicResource Loc_Reg2InpLastName}"/>
             </StackPanel>
             <StackPanel Margin="5">
                 <TextBlock Margin="5 0 5 5" Text="{DynamicResource Loc_Reg2Email}"/>
-                <ui:CustomTextBox Width="210px" BaseText="{DynamicResource Loc_LogEmail}"/>
+                <ui:CustomTextBox x:Name="EmailR" Width="210px" BaseText="{DynamicResource Loc_LogEmail}"/>
             </StackPanel>
             <StackPanel Margin="5">
                 <TextBlock Margin="5 0 5 5" Text="{DynamicResource Loc_Reg2UserName}"/>
-                <ui:CustomTextBox Width="210px" BaseText="{DynamicResource Loc_Reg2InpUserName}"/>
+                <ui:CustomTextBox x:Name="UsernameR" Width="210px" BaseText="{DynamicResource Loc_Reg2InpUserName}"/>
             </StackPanel>
             <StackPanel Margin="5">
                 <TextBlock Margin="5 0 5 5" Text="{DynamicResource Loc_LogPass}"/>
-                <ui:CustomTextBox Width="210px" BaseText="{DynamicResource Loc_RegPass}"/>
+                <ui:CustomTextBox x:Name="FPassR" Width="210px" IsPassword="True" BaseText="{DynamicResource Loc_RegPass}"/>
             </StackPanel>
             <StackPanel Margin="5">
                 <TextBlock Margin="5 0 5 5" Text="{DynamicResource Loc_LogPass}"/>
-                <ui:CustomTextBox Width="210px" BaseText="{DynamicResource Loc_RegRepPass}"/>
+                <ui:CustomTextBox x:Name="SPassR" Width="210px" IsPassword="True" BaseText="{DynamicResource Loc_RegRepPass}"/>
             </StackPanel>
             <StackPanel Margin="5">
                 <TextBlock Margin="5 0 5 5" Text="{DynamicResource Loc_Reg3EncryptKey}"/>
-                <ui:CustomTextBox x:Name="KeyHolder" Width="430px" BaseText="{DynamicResource Loc_Reg3Key}"/>
+                <ui:CustomTextBox x:Name="KeyHolderR" Width="430px" BaseText="{DynamicResource Loc_Reg3Key}"/>
             </StackPanel>
             <WrapPanel Width="430" Margin="5">
                 <StackPanel Width="215">
@@ -71,18 +69,18 @@
                 </StackPanel>
             </WrapPanel>
             
-            <ui:PrivatePolicy Width="430px"/>
+            <ui:PrivatePolicy x:Name="PrivPolicy" Width="430px"/>
 
             <StackPanel Width="440">
-                <Button Style="{DynamicResource InpImgButton}" Content="{DynamicResource Loc_Reg2ChooseIMG}"/>
+                <Button Command="{Binding getImg}" Style="{DynamicResource InpImgButton}" Content="{DynamicResource Loc_Reg2ChooseIMG}" />
             </StackPanel>
             
         </WrapPanel>
 
         <WrapPanel Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center">
             <DockPanel Width="325">
-                <Button Command="ui:ExitCommand.Exit" Style="{DynamicResource StepButton}" Content="{DynamicResource Loc_Reg2Back}" />
-                <Button Style="{DynamicResource StepButton}" Content="{DynamicResource Loc_Reg2Continue}" HorizontalAlignment="Right"/>
+                <Button Style="{DynamicResource StepButton}" Content="{DynamicResource Loc_Reg2Back}" />
+                <Button Command="{Binding Continue}" Style="{DynamicResource StepButton}" Content="{DynamicResource Loc_Reg2Continue}" HorizontalAlignment="Right"/>
             </DockPanel>
         </WrapPanel>
 

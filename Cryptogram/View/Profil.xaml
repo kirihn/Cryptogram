@@ -1,0 +1,45 @@
+﻿<Window x:Class="Cryptogram.View.Profil"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cryptogram.View"
+        mc:Ignorable="d"
+        xmlns:ui="clr-namespace:Cryptogram.UI"
+        ResizeMode="CanMinimize"
+        Title="{DynamicResource Loc_Reg3Welc}" Height="600" Width="900" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <DockPanel Height="50" Grid.ColumnSpan="2" Background="{DynamicResource Theme_DarkBground}" >
+            <Image Height="30"  Source="..\IMG\Icon\LogInLogo.png" RenderOptions.BitmapScalingMode="HighQuality" Margin="10"/>
+            <TextBlock Style="{DynamicResource HyperText}" MouseDown="LogUot" Text="{DynamicResource Loc_LogOut}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,12,0"/>
+
+        </DockPanel>
+        <StackPanel Grid.Row="1" Background="{DynamicResource Theme_MainColor}">
+            <Button Command="{Binding GoToMyProfile}" HorizontalAlignment="Center" Height="60" Width="80" Background="{DynamicResource Theme_MainColor}">
+                <Image  Height="28"  Source="..\IMG\Icon\ProfileOff.png" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button HorizontalAlignment="Center" Height="60" Width="80" Background="{DynamicResource Theme_MainColor}">
+                <Image  Height="28"  Source="..\IMG\Icon\MessageOff.png" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button HorizontalAlignment="Center" Height="60" Width="80" Background="{DynamicResource Theme_MainColor}">
+                <Image  Height="28"  Source="..\IMG\Icon\FriendsOff.png" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button HorizontalAlignment="Center" Height="60" Width="80" Background="{DynamicResource Theme_MainColor}">
+                <Image  Height="28"  Source="..\IMG\Icon\SettingOff.png" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button HorizontalAlignment="Center" Height="60" Width="80" Background="{DynamicResource Theme_MainColor}">
+                <Image  Height="28"  Source="..\IMG\Icon\help.png" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+        </StackPanel>
+        <Frame x:Name="mainFrame"  Grid.Column="1" Grid.Row="1"/>
+    </Grid>
+</Window> 
