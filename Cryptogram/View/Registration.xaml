@@ -33,31 +33,31 @@
 
         <WrapPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" >
             <StackPanel Margin="5">
-                <TextBlock Margin="5 0 5 5" Text="{DynamicResource Loc_Reg2Name}"/>
+                <TextBlock Foreground="{DynamicResource Theme_TextColor}" Margin="5 0 5 5" Text="{DynamicResource Loc_Reg2Name}"/>
                 <ui:CustomTextBox x:Name="NameR" Width="210px" BaseText="{DynamicResource Loc_Reg2InpName}"/>
             </StackPanel>
             <StackPanel Margin="5">
-                <TextBlock Margin="5 0 5 5" Text="{DynamicResource Loc_Reg2LastName}"/>
+                <TextBlock Foreground="{DynamicResource Theme_TextColor}" Margin="5 0 5 5" Text="{DynamicResource Loc_Reg2LastName}"/>
                 <ui:CustomTextBox x:Name="LastnameR" Width="210px" BaseText="{DynamicResource Loc_Reg2InpLastName}"/>
             </StackPanel>
             <StackPanel Margin="5">
-                <TextBlock Margin="5 0 5 5" Text="{DynamicResource Loc_Reg2Email}"/>
+                <TextBlock Foreground="{DynamicResource Theme_TextColor}" Margin="5 0 5 5" Text="{DynamicResource Loc_Reg2Email}"/>
                 <ui:CustomTextBox x:Name="EmailR" Width="210px" BaseText="{DynamicResource Loc_LogEmail}"/>
             </StackPanel>
             <StackPanel Margin="5">
-                <TextBlock Margin="5 0 5 5" Text="{DynamicResource Loc_Reg2UserName}"/>
+                <TextBlock Foreground="{DynamicResource Theme_TextColor}" Margin="5 0 5 5" Text="{DynamicResource Loc_Reg2UserName}"/>
                 <ui:CustomTextBox x:Name="UsernameR" Width="210px" BaseText="{DynamicResource Loc_Reg2InpUserName}"/>
             </StackPanel>
             <StackPanel Margin="5">
-                <TextBlock Margin="5 0 5 5" Text="{DynamicResource Loc_LogPass}"/>
+                <TextBlock Foreground="{DynamicResource Theme_TextColor}" Margin="5 0 5 5" Text="{DynamicResource Loc_LogPass}"/>
                 <ui:CustomTextBox x:Name="FPassR" Width="210px" IsPassword="True" BaseText="{DynamicResource Loc_RegPass}"/>
             </StackPanel>
             <StackPanel Margin="5">
-                <TextBlock Margin="5 0 5 5" Text="{DynamicResource Loc_LogPass}"/>
+                <TextBlock Foreground="{DynamicResource Theme_TextColor}" Margin="5 0 5 5" Text="{DynamicResource Loc_LogPass}"/>
                 <ui:CustomTextBox x:Name="SPassR" Width="210px" IsPassword="True" BaseText="{DynamicResource Loc_RegRepPass}"/>
             </StackPanel>
             <StackPanel Margin="5">
-                <TextBlock Margin="5 0 5 5" Text="{DynamicResource Loc_Reg3EncryptKey}"/>
+                <TextBlock Foreground="{DynamicResource Theme_TextColor}" Margin="5 0 5 5" Text="{DynamicResource Loc_Reg3EncryptKey}"/>
                 <ui:CustomTextBox x:Name="KeyHolderR" Width="430px" BaseText="{DynamicResource Loc_Reg3Key}"/>
             </StackPanel>
             <WrapPanel Width="430" Margin="5">
@@ -79,7 +79,7 @@
 
         <WrapPanel Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center">
             <DockPanel Width="325">
-                <Button Style="{DynamicResource StepButton}" Content="{DynamicResource Loc_Reg2Back}" />
+                <Button Style="{DynamicResource StepButton}" Content="{DynamicResource Loc_Reg2Back}" Click="Button_Click" />
                 <Button Command="{Binding Continue}" Style="{DynamicResource StepButton}" Content="{DynamicResource Loc_Reg2Continue}" HorizontalAlignment="Right"/>
             </DockPanel>
         </WrapPanel>

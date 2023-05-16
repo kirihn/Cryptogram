@@ -17,20 +17,6 @@ namespace Cryptogram.ViewModel
 {
     public class RegistrationVM : WindowVM<Registration>
     {
-        //public string username;
-        //public string Name { get; set; }
-        //public string Lastname { get; set; }
-        //public string Status { get; set; }
-        //public string Email { get; set; }
-        //public byte[] AvatarImage { get; set; }
-        //public string Login { get; set; }
-        //public string Password { get; set; }
-        //public string UserName
-        //{
-        //    get { return username; }
-        //    set { username = "@" + value; }
-        //}
-
         public AnyUser U;
 
         public RegistrationVM(Registration owner) : base(owner)
@@ -94,7 +80,7 @@ namespace Cryptogram.ViewModel
         private void getImgExecuted(object obj)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image files (*.png;*.jpeg)|*.png;*.jpeg|All files (*.*)|*.*";
+            openFileDialog.Filter = "Image files (*.png;*.jpeg;*.jpg)|*.png;*.jpeg;*.jpg|All files (*.*)|*.*";
 
             if (openFileDialog.ShowDialog() == true)
             {

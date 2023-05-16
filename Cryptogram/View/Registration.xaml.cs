@@ -26,10 +26,20 @@ namespace Cryptogram.View
             DataContext = new RegistrationVM(this);
 
         }
-
+    #region }
         public void GetMoreInformation(object sender, MouseButtonEventArgs e)
         {
-            //MessageBox.Show("You luzzer");
+            MessageBox.Show("Шифр-ключ применяется для кодировки отправляемых сообщений. " +
+                "Вам следует запомнить его и делиться им только с теми людьми, которые " +
+                "должны получать сообщения от вас для их расшифровки. Ключ должен содержать " +
+                "только цифры и не может начинаться с нуля. Максимальное число, которое ключ " +
+                "может содержать, составляет 999 999 999 999 999 999. Чем больше разрядов " +
+                "используется, тем надежнее ваш шифр-ключ.\n(The cipher key is used to encode" +
+                " the messages being sent. You should remember it and share it only with those" +
+                " people who need to receive messages from you to decrypt them. The key must" +
+                " contain only digits and cannot start from zero. The maximum number that a" +
+                " key can contain is 999,999,999,999,999. The more bits are used, the " +
+                "more reliable your cipher key is.)");
         }
 
         public void GetRandomKey(object sender, MouseButtonEventArgs e)
@@ -37,12 +47,13 @@ namespace Cryptogram.View
             KeyHolderR.box.Text = (new Random()).NextInt64(100000000000000000,999_999_999_999_999_999).ToString();
         }
 
-        private void Exit_Executed(object sender, ExecutedRoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             Authorization NewAccount = new Authorization();
             this.Close();
             NewAccount.Show();
-
         }
+
     }
+    #endregion
 }

@@ -19,6 +19,7 @@
     <None Remove="IMG\Icon\SettingsOn.png" />
     <None Remove="IMG\Icon\StandartBackground.jpg" />
     <None Remove="IMG\Icon\TransformKey.png" />
+    <None Remove="IMG\UserPhoto\Burunov.jpg" />
     <None Remove="SQLADO\AddNewMessage.sql" />
     <None Remove="SQLADO\AddNewUser.sql" />
     <None Remove="SQLADO\DBCreation.sql" />
@@ -47,6 +48,7 @@
     <Resource Include="IMG\Icon\SettingsOn.png" />
     <Resource Include="IMG\Icon\StandartBackground.jpg" />
     <Resource Include="IMG\Icon\TransformKey.png" />
+    <Resource Include="IMG\UserPhoto\Burunov.jpg" />
     <Resource Include="SQLADO\AddNewMessage.sql" />
     <Resource Include="SQLADO\AddNewUser.sql" />
     <Resource Include="SQLADO\DBCreation.sql" />

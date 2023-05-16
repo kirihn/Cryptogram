@@ -87,25 +87,32 @@ namespace Cryptogram.ViewModel
         private void GoToMyProfileExecuted(object obj)
         {
             MyProfile myPage = new MyProfile(Owner.MyId);
-
-
             // Переход на страницу
             Owner.mainFrame.NavigationService.Navigate(myPage);
         }
         private void GoToMyChatsExecuted(object obj)
         {
-
+            MyChats myPage = new MyChats(Owner.MyId);
+            // Переход на страницу
+            Owner.mainFrame.NavigationService.Navigate(myPage);
         }
         private void GoToMyFriendsExecuted(object obj)
         {
-
+            MyFriends myPage = new MyFriends(Owner.MyId);
+            // Переход на страницу
+            Owner.mainFrame.NavigationService.Navigate(myPage);
         }
         private void GoToMySettingsExecuted(object obj)
         {
-
+            MySettings myPage = new MySettings(Owner.MyId);
+            // Переход на страницу
+            Owner.mainFrame.NavigationService.Navigate(myPage);
         }
         private void GoToMyHelpExecuted(object obj)
         {
+            MyHelp myPage = new MyHelp(Owner.MyId);
+            // Переход на страницу
+            Owner.mainFrame.NavigationService.Navigate(myPage);
 
         }
     }

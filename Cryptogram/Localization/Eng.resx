@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Loc_AplCh" xml:space="preserve">
+    <value>Apply changes</value>
+  </data>
   <data name="Loc_Authorization" xml:space="preserve">
     <value>Authorization</value>
+  </data>
+  <data name="Loc_InpStatuc" xml:space="preserve">
+    <value>Input your status...</value>
   </data>
   <data name="Loc_LogEmail" xml:space="preserve">
     <value>Email</value>
@@ -215,5 +221,8 @@
   </data>
   <data name="Loc_RegRepPass" xml:space="preserve">
     <value>Repeat password...</value>
+  </data>
+  <data name="Loc_Status" xml:space="preserve">
+    <value>Status</value>
   </data>
 </root>

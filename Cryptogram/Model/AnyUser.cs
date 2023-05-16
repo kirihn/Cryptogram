@@ -18,7 +18,6 @@ namespace Cryptogram.Model
         public string Login { get; set; } //
         public string Password { get; set; } //
         public long EncryptKey { get; set; }//
-
         public string UserName { get; set; }
         public AnyUser()
         {

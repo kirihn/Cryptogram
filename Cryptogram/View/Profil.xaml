@@ -27,19 +27,19 @@
             <Button Command="{Binding GoToMyProfile}" HorizontalAlignment="Center" Height="60" Width="80" Background="{DynamicResource Theme_MainColor}">
                 <Image  Height="28"  Source="..\IMG\Icon\ProfileOff.png" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Button>
-            <Button HorizontalAlignment="Center" Height="60" Width="80" Background="{DynamicResource Theme_MainColor}">
+            <Button Command="{Binding GoToMyChats}" HorizontalAlignment="Center" Height="60" Width="80" Background="{DynamicResource Theme_MainColor}">
                 <Image  Height="28"  Source="..\IMG\Icon\MessageOff.png" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Button>
-            <Button HorizontalAlignment="Center" Height="60" Width="80" Background="{DynamicResource Theme_MainColor}">
+            <Button Command="{Binding GoToMyFriends}" HorizontalAlignment="Center" Height="60" Width="80" Background="{DynamicResource Theme_MainColor}">
                 <Image  Height="28"  Source="..\IMG\Icon\FriendsOff.png" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Button>
-            <Button HorizontalAlignment="Center" Height="60" Width="80" Background="{DynamicResource Theme_MainColor}">
+            <Button Command="{Binding GoToSettings}" HorizontalAlignment="Center" Height="60" Width="80" Background="{DynamicResource Theme_MainColor}">
                 <Image  Height="28"  Source="..\IMG\Icon\SettingOff.png" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Button>
-            <Button HorizontalAlignment="Center" Height="60" Width="80" Background="{DynamicResource Theme_MainColor}">
+            <Button Command="{Binding GoToMyHelp}" HorizontalAlignment="Center" Height="60" Width="80" Background="{DynamicResource Theme_MainColor}">
                 <Image  Height="28"  Source="..\IMG\Icon\help.png" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Button>
         </StackPanel>
-        <Frame x:Name="mainFrame"  Grid.Column="1" Grid.Row="1"/>
+        <Frame x:Name="mainFrame" NavigationUIVisibility="Hidden" Grid.Column="1" Grid.Row="1"/>
     </Grid>
 </Window> 

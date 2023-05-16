@@ -61,11 +61,29 @@ namespace Cryptogram.Localization {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Применить изменения.
+        /// </summary>
+        public static string Loc_AplCh {
+            get {
+                return ResourceManager.GetString("Loc_AplCh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Авторизация.
         /// </summary>
         public static string Loc_Authorization {
             get {
                 return ResourceManager.GetString("Loc_Authorization", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Введите ваш статус....
+        /// </summary>
+        public static string Loc_InpStatuc {
+            get {
+                return ResourceManager.GetString("Loc_InpStatuc", resourceCulture);
             }
         }
         
@@ -354,6 +372,15 @@ namespace Cryptogram.Localization {
         public static string Loc_RegRepPass {
             get {
                 return ResourceManager.GetString("Loc_RegRepPass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Статус.
+        /// </summary>
+        public static string Loc_Status {
+            get {
+                return ResourceManager.GetString("Loc_Status", resourceCulture);
             }
         }
     }

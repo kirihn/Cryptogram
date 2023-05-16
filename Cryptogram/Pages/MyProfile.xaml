@@ -3,14 +3,49 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:ui="clr-namespace:Cryptogram.UI"
       xmlns:local="clr-namespace:Cryptogram.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="535" d:DesignWidth="820"
       Title="MyProfile">
     <Page.Background>
         <ImageBrush ImageSource="/StandartBackground.jpg"/>
     </Page.Background>
     <Grid>
-        <TextBlock x:Name="MyIDD" Foreground="Aqua" Text="{Binding MyId}"/>
+        <Border BorderBrush="{DynamicResource Theme_MainColor}" Height="480" Width="400" BorderThickness="4" Background="#2F2F2F" >
+            <StackPanel Width="360" Height="440">
+
+                <StackPanel>
+                    <Image x:Name="MyAvatar" Height="150"  Source="..\IMG\UserPhoto\Burunov.jpg" RenderOptions.BitmapScalingMode="HighQuality" VerticalAlignment="Top"/>
+                </StackPanel>
+
+
+                <WrapPanel HorizontalAlignment="Center" >
+
+                    <StackPanel Margin="5 0 5 2">
+                        <TextBlock Foreground="{DynamicResource Theme_TextColor}" Margin="5 0 5 0" Text="{DynamicResource Loc_Reg2Name}"/>
+                        <ui:CustomTextBox x:Name="NameP" Width="370" BaseText="{DynamicResource Loc_Reg2InpName}"/>
+                    </StackPanel>
+                    <StackPanel Margin="5 2 5 2">
+                        <TextBlock Foreground="{DynamicResource Theme_TextColor}" Margin="5 0 5 0" Text="{DynamicResource Loc_Reg2LastName}"/>
+                        <ui:CustomTextBox x:Name="LastnameP" Width="370" BaseText="{DynamicResource Loc_Reg2InpLastName}"/>
+                    </StackPanel>
+                    <StackPanel Margin="5 2 5 2">
+                        <TextBlock Foreground="{DynamicResource Theme_TextColor}" Margin="5 0 5 0" Text="{DynamicResource Loc_Reg2UserName}"/>
+                        <ui:CustomTextBox x:Name="UserP" Width="370" BaseText="{DynamicResource Loc_Reg2InpUserName}"/>
+                    </StackPanel>
+                    <StackPanel Margin="5 2 5 2">
+                        <TextBlock Foreground="{DynamicResource Theme_TextColor}" Margin="5 0 5 0" Text="{DynamicResource Loc_Status}"/>
+                        <ui:CustomTextBox x:Name="StatuseP" Width="370" BaseText="{DynamicResource Loc_InpStatus}"/>
+                    </StackPanel>
+                    
+                </WrapPanel>
+
+
+                <StackPanel VerticalAlignment="Bottom">
+                    <Button Command="{Binding ApplyChanges}" Style="{DynamicResource AplyButton}" Content="{DynamicResource Loc_AplCh}" />
+                </StackPanel>
+            </StackPanel>
+        </Border>
     </Grid>
 </Page>

@@ -4,13 +4,20 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Cryptogram.Pages"
+      xmlns:ui="clr-namespace:Cryptogram.UI"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="535" d:DesignWidth="820"
       Title="MyFriends">
     <Page.Background>
         <ImageBrush ImageSource="/StandartBackground.jpg"/>
     </Page.Background>
-    <Grid>
-        
+    <Grid Margin="30 20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <ui:CustomTextBox x:Name="NameR" Width="210px" BaseText="{DynamicResource Loc_Reg2InpName}"/>
+        </StackPanel>
     </Grid>
 </Page>
